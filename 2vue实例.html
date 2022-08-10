@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue实例</title>
+    <script src="js/vue.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="msg">{{msg}}</div>
+        <div>{{demo()}}</div>
+        <div>{{a}}</div>
+               <!--调用demo函数-->
+    </div>
+    
+    <script>
+        var app = new Vue({//声明全局变量
+            el: '#app',//声明范围
+            data: {//保存变量
+                 msg: 'Hello Vue!',//可实时响应，只需要在控制台输入app.msg="更改的内容"
+                 a:5,//数据的渲染必须声明
+            },
+            methods:{ //所有函数的集合，function（）{}
+                demo:function(){
+                    console.log("demo")
+                }
+                
+            }
+        })
+//        app.a="djsfklds"  
+        
+    
+    
+    </script>
+    
+    
+    
+    
+</body>
+</html>
